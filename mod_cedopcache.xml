@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="administrator" method="upgrade">
+	<name>CedOPCache | Galaxiis.com</name>
+	<author>Galaxiis.com</author>
+	<creationDate>October 2016</creationDate>
+	<copyright>Copyright (C) 2016 Galaxiis. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
+	<authorEmail>galaxiiscom@gmail.org</authorEmail>
+	<authorUrl>www.galaxiis.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Zend OPcache Joomla Visualization module.</description>
+	<files>
+		<filename module="mod_cedopcache">mod_cedopcache.php</filename>
+		<filename module="mod_cedopcache">helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_ADMIN_LATEST" />
+	<config>
+		<fields name="params">
+			<fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+				<field
+						name="width"
+						type="text"
+						default="250"
+						label="Width"
+						description="Width of pie chart in pixel. Default is 250." />
+				<!--<field-->
+						<!--name="is3D"-->
+						<!--type="radio"-->
+						<!--class="btn-group btn-group-yesno"-->
+						<!--default="1"-->
+						<!--label="3D Chart."-->
+						<!--description="3D chart. Default is true">-->
+					<!--<option-->
+							<!--value="1">JYES</option>-->
+					<!--<option-->
+							<!--value="0">JNO</option>-->
+				<!--</field>-->
+
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="automatic_title"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="COM_MODULES_FIELD_AUTOMATIC_TITLE_LABEL"
+					description="COM_MODULES_FIELD_AUTOMATIC_TITLE_DESC">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
